@@ -37,14 +37,6 @@ public class Member {
     @UpdateTimestamp
     private LocalDateTime lastEdited;
 
-    @ElementCollection
-    List<String> favoriteCarColors = new ArrayList<>();
-
-    @ElementCollection
-    @MapKeyColumn(name = "description")
-    @Column(name = "phone_number")
-    Map<String,String> phones = new HashMap<>();
-
     public Member(String user, String password, String email,
                   String firstName, String lastName, String street, String city, String zip) {
         this.username = user;
